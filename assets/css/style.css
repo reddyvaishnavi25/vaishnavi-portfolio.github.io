@@ -381,8 +381,8 @@ section .container {
   padding-bottom:20px;
   color: black;
   z-index:100;
-  padding-left:400px;
   visibility: visible;
+  text-align: center;
   opacity:1;
 }
 
@@ -516,10 +516,10 @@ section .container {
 
 .interests-container {
   margin-top:50px;
-  margin-left:200px;
+  
   padding:50px;
-  width:1150px;
-  height:300px;
+  width:100%;
+  
   border-radius: 10px;
   background-color: lightblue;
 }
@@ -1145,11 +1145,11 @@ section .container {
     transform: translateX(-50%);
   }
 }
-
+/*
 
 .skills-container {
   display: flex;
-  gap: 20px; /* Adjust the gap between boxes as needed */
+  gap: 20px; 
   align-content: center;
   justify-content: center;
 }
@@ -1167,7 +1167,38 @@ section .container {
 }
 
 .skill-box img {
-  width: 100px; /* Adjust the width of the image as needed */
+  width: 100px; 
   height: auto;
   margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .skill-box {
+    width: calc(100% - 40px); 
+  }
+}
+*/
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-box {
+  width: calc(50% - 40px);
+  max-width: 250px;
+  height: auto;
+  border: 1px solid #f8f4f4;
+  border-radius: 2%;
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .skill-box {
+    width: calc(100% - 40px);
+  }
 }
